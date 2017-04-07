@@ -10,9 +10,12 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var imageCell: UIImageView!
+    var receivedImage: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imageCell.image = receivedImage
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +24,9 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func tapNav(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
